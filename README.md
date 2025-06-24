@@ -7,7 +7,184 @@ Sharpen your JavaScript skills with daily tricky JS quizzes! Each question inclu
 
 ---
 
-## 📅 Day 1
+---
+
+## 📅 Quiz #1
+
+```js
+console.log(3 + 2 + "5");
+```
+
+**Options:**
+
+* A) 10
+* B) 55
+* C) "10"
+* D) "35"
+
+<details>
+<summary>✅ Answer</summary>
+**B) 55**  
+Explanation: `3 + 2 = 5` (number), then `5 + "5" = "55"` (string).
+</details>
+
+---
+
+## 📅 Quiz #2
+
+```js
+let result = [1, 2, 3] + [4, 5, 6];
+console.log(result);
+```
+
+**Options:**
+
+* A) "1,2,34,5,6"
+* B) "1,2,3,4,5,6"
+* C) "1,2,34,5,6"
+* D) "1,2,34,5,6"
+
+<details>
+<summary>✅ Answer</summary>
+**B) "1,2,34,5,6"**  
+Explanation: Arrays convert to strings, and then are concatenated. `"1,2,3" + "4,5,6" = "1,2,34,5,6"`
+</details>
+
+---
+
+## 📅 Quiz #3
+
+```js
+let x = 5;
+console.log(x++ + ++x);
+```
+
+**Options:**
+
+* A) 10
+* B) 11
+* C) 12
+* D) 13
+
+<details>
+<summary>✅ Answer</summary>
+**B) 11**  
+Explanation: `x++` is 5, `++x` becomes 6. 5 + 6 = 11.
+</details>
+
+---
+
+## 📅 Quiz #4
+
+```js
+let obj = {
+  valueOf() { return 10; },
+  toString() { return "20"; }
+};
+console.log(obj + "");
+```
+
+**Options:**
+
+* A) 10
+* B) "20"
+* C) "10"
+* D) "\[object Object]"
+
+<details>
+<summary>✅ Answer</summary>
+**C) "10"**  
+Explanation: `valueOf()` is prioritized in numeric contexts. `obj + ""` triggers coercion → 10 + "" = "10".
+</details>
+
+---
+
+## 📅 Quiz #5
+
+```js
+console.log(typeof null);
+```
+
+**Options:**
+
+* A) "null"
+* B) "undefined"
+* C) "object"
+* D) "none"
+
+<details>
+<summary>✅ Answer</summary>
+**C) "object"**  
+Explanation: Historical JS bug – `null` is `object` since early spec days.
+</details>
+
+---
+
+## 📅 Quiz #6
+
+```js
+console.log("5" - - "2");
+```
+
+**Options:**
+
+* A) 3
+* B) 7
+* C) "52"
+* D) NaN
+
+<details>
+<summary>✅ Answer</summary>
+**B) 7**  
+Explanation: Unary minus on "-" converts both to numbers → 5 - (-2) = 7
+</details>
+
+---
+
+## 📅 Quiz #7
+
+```js
+console.log(true + false);
+```
+
+**Options:**
+
+* A) 0
+* B) 1
+* C) truefalse
+* D) NaN
+
+<details>
+<summary>✅ Answer</summary>
+**B) 1**  
+Explanation: true → 1, false → 0 → 1 + 0 = 1
+</details>
+
+---
+
+## 📅 Quiz #8
+
+```js
+console.log("10" - "4" - "3" - 2 + "5");
+```
+
+**Options:**
+
+* A) "15"
+* B) 1
+* C) "15"
+* D) "15"
+
+<details>
+<summary>✅ Answer</summary>
+**D) "15"**  
+Explanation: "10" - "4" - "3" - 2 = 1, then 1 + "5" → "15"
+</details>
+
+---
+
+
+## 📅 Quiz 9
 
 ### ❓ What will be the output?
 
@@ -30,7 +207,7 @@ console.log(result);
 
 ---
 
-## 📅 Day 2
+## 📅 Quiz 10
 
 ### ❓ What will this print?
 
@@ -53,7 +230,7 @@ console.log(x++ + ++x);
 
 ---
 
-## 📅 Day 3
+## 📅 Quiz 11
 
 ### ❓ What does this output?
 
@@ -75,7 +252,7 @@ console.log("5" - - "2");
 
 ---
 
-## 📅 Day 4
+## 📅 Quiz 12
 
 ### ❓ What will the output be?
 
@@ -105,7 +282,7 @@ console.log(obj + "");
 
 ---
 
-## 📅 Day 5
+## 📅 Quiz 13
 
 ### ❓ Which value is logged?
 
@@ -127,6 +304,8 @@ console.log(result);
 </details>
 
 ---
+
+
 
 > 📌 More quizzes coming soon! Stay tuned and star ⭐ the repo.
 
