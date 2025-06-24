@@ -140,4 +140,4 @@ Feel free to open a pull request with your own tricky JS question!
 
 ### 📬 Connect
 
-Follow [@yourhandle](https://instagram.com/yourhandle) for daily tech quizzes on Instagram!
+Follow [@https://www.instagram.com/the_final_commit/](https://www.instagram.com/the_final_commit/) for daily tech quizzes on Instagram!
