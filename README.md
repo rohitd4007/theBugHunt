@@ -305,6 +305,240 @@ console.log(result);
 
 ---
 
+---
+
+## 📅 Quiz 14
+
+### ❓ What will be the output of the following?
+
+```js
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => {
+    console.log(i);
+  }, 1000);
+}
+```
+
+* A) 0 1 2
+* B) 3 3 3
+* C) 0 0 0
+* D) 1 2 3
+
+<details>
+<summary>✅ Answer</summary>
+
+**B) 3 3 3** – Because of `var` hoisting, `i` refers to the same variable. After the loop ends, `i = 3`, which is logged after 1 second.
+
+</details>
+
+---
+
+## 📅 Quiz 15
+
+```js
+let x = "5";
+let y = 3;
+let result = x - y;
+console.log(typeof result);
+```
+
+* A) "string"
+* B) "number"
+* C) "NaN"
+* D) "undefined"
+
+<details>
+<summary>✅ Answer</summary>
+
+**B) "number"** – The minus operator coerces both operands into numbers.
+
+</details>
+
+---
+
+## 📅 Quiz 16
+
+### ❓ What will this print?
+
+```js
+console.log(typeof null);
+```
+
+* A) "null"
+* B) "object"
+* C) "undefined"
+* D) "string"
+
+<details>
+<summary>✅ Answer</summary>
+
+**B) "object"** – This is a well-known JavaScript quirk. `typeof null` returns "object" due to legacy reasons.
+
+</details>
+
+---
+
+## 📅 Quiz 17
+
+```js
+console.log(1 + "2" + "2");
+```
+
+* A) "122"
+* B) 5
+* C) "14"
+* D) "32"
+
+<details>
+<summary>✅ Answer</summary>
+
+**A) "122"** – Number `1` coerces into string, resulting in "1" + "2" + "2" = "122"
+
+</details>
+
+---
+
+## 📅 Quiz 18
+
+```js
+let a = [1, 2, 3];
+let b = a;
+b.push(4);
+console.log(a);
+```
+
+* A) \[1, 2, 3]
+* B) \[1, 2, 3, 4]
+* C) \[4]
+* D) Error
+
+<details>
+<summary>✅ Answer</summary>
+
+**B) \[1, 2, 3, 4]** – Arrays are reference types, so both `a` and `b` point to the same array in memory.
+
+</details>
+
+---
+
+## 📅 Quiz 19
+
+### ❓ What will be the output?
+
+```js
+console.log([] == ![]);
+```
+
+* A) true
+* B) false
+* C) TypeError
+* D) undefined
+
+<details>
+<summary>✅ Answer</summary>
+
+**A) true** – `![]` is false, so comparison becomes `[] == false`. Then both sides are coerced to 0.
+
+</details>
+
+---
+
+## 📅 Quiz 20
+
+```js
+let obj = {};
+console.log(obj.__proto__ === Object.prototype);
+```
+
+* A) true
+* B) false
+* C) undefined
+* D) Error
+
+<details>
+<summary>✅ Answer</summary>
+
+**A) true** – All plain objects inherit from `Object.prototype` by default.
+
+</details>
+
+---
+
+## 📅 Quiz 21
+
+### ❓ What is the output of:
+
+```js
+console.log(0.1 + 0.2 === 0.3);
+```
+
+* A) true
+* B) false
+* C) NaN
+* D) undefined
+
+<details>
+<summary>✅ Answer</summary>
+
+**B) false** – Floating point arithmetic in JavaScript leads to precision errors. `0.1 + 0.2 = 0.30000000000000004`
+
+</details>
+
+---
+
+## 📅 Quiz 22
+
+```js
+let a = "10";
+let b = 10;
+console.log(a == b);
+```
+
+* A) true
+* B) false
+* C) Error
+* D) undefined
+
+<details>
+<summary>✅ Answer</summary>
+
+**A) true** – Loose equality (`==`) allows type coercion, so string "10" is converted to number 10.
+
+</details>
+
+---
+
+## 📅 Quiz 23
+
+### ❓ What will be printed?
+
+```js
+function test() {
+  return
+  {
+    name: "JS";
+  }
+}
+console.log(test());
+```
+
+* A) { name: "JS" }
+* B) undefined
+* C) Error
+* D) null
+
+<details>
+<summary>✅ Answer</summary>
+
+**B) undefined** – Automatic semicolon insertion after `return` causes function to return `undefined`.
+
+</details>
+
+---
+
+### 💡 Follow this repo for more JavaScript brain teasers every week!
+
+> **Tip:** Try solving before peeking at the answer 😉
 
 
 > 📌 More quizzes coming soon! Stay tuned and star ⭐ the repo.
